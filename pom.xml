@@ -37,6 +37,36 @@
         <lombok.version>1.18.22</lombok.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>Parkl Nexus</name>
+            <url>https://dev.parkl.net/nexus/repository/parkl-public/</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>parkl_snapshots</id>
+            <name>Parkl Snapshots</name>
+            <url>https://dev.parkl.net/nexus/repository/parkl-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>parkl_releases</id>
+            <name>Parkl Releases</name>
+            <url>https://dev.parkl.net/nexus/repository/parkl-releases/</url>
+        </repository>
+    </distributionManagement>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <url>https://dev.parkl.net/nexus/repository/parkl-public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+
     <build>
         <plugins>
             <plugin>
@@ -202,11 +232,7 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.13.5</version>
         </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
-            <version>2.13.5</version>
-        </dependency>
+
 
         <dependency>
             <groupId>javax.validation</groupId>
