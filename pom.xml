@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>de.rwth.idsg</groupId>
+    <groupId>net.parkl.ocpp</groupId>
     <artifactId>ocpp-jaxb</artifactId>
-    <version>0.0.7</version>
+    <version>0.0.7-java17</version>
     <packaging>jar</packaging>
 
     <organization>
@@ -30,10 +30,10 @@
     </licenses>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <cxf.version>3.2.4</cxf.version>
+        <cxf.version>4.0.1</cxf.version>
         <lombok.version>1.18.22</lombok.version>
     </properties>
 
@@ -74,9 +74,9 @@
                             <bindingFile>${basedir}/src/main/resources/wsdl-binding/add_interface.xml</bindingFile>
                         </bindingFiles>
                         <extraargs>
-                            <extraarg>-xjc-Xfluent-api</extraarg>
+                            <!--<extraarg>-xjc-Xfluent-api</extraarg>
                             <extraarg>-xjc-Xinheritance</extraarg>
-                            <extraarg>-xjc-Xannotate</extraarg>
+                            <extraarg>-xjc-Xannotate</extraarg>-->
                             <!--<extraarg>-verbose</extraarg>-->
                             <extraarg>-exsh</extraarg>
                             <extraarg>true</extraarg>
@@ -98,7 +98,7 @@
                         <artifactId>lombok</artifactId>
                         <version>${lombok.version}</version>
                     </dependency>
-                    <dependency>
+                    <!--<dependency>
                         <groupId>org.jvnet.jaxb2_commons</groupId>
                         <artifactId>jaxb2-basics-annotate</artifactId>
                         <version>1.0.1</version>
@@ -112,7 +112,7 @@
                         <groupId>org.jvnet.jaxb2_commons</groupId>
                         <artifactId>jaxb2-basics</artifactId>
                         <version>0.9.0</version>
-                    </dependency>
+                    </dependency>-->
                 </dependencies>
             </plugin>
             <plugin>
@@ -200,13 +200,35 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.13.4.1</version>
+            <version>2.13.5</version>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
+            <version>2.13.5</version>
+        </dependency>
+
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>2.0.1.Final</version>
         </dependency>
+        <dependency>
+            <groupId>jakarta.xml.ws</groupId>
+            <artifactId>jakarta.xml.ws-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.jws</groupId>
+            <artifactId>jakarta.jws-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>

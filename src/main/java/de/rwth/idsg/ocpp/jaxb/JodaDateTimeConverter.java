@@ -2,7 +2,7 @@ package de.rwth.idsg.ocpp.jaxb;
 
 import org.joda.time.DateTime;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  * Joda-Time and XSD represent data and time information according to ISO 8601.
