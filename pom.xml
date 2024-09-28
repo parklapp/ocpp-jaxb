@@ -37,35 +37,7 @@
         <lombok.version>1.18.34</lombok.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>nexus</id>
-            <name>Parkl Nexus</name>
-            <url>https://dev.parkl.net/nexus/repository/parkl-public/</url>
-        </repository>
-    </repositories>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>parkl_snapshots</id>
-            <name>Parkl Snapshots</name>
-            <url>https://dev.parkl.net/nexus/repository/parkl-snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>parkl_releases</id>
-            <name>Parkl Releases</name>
-            <url>https://dev.parkl.net/nexus/repository/parkl-releases/</url>
-        </repository>
-    </distributionManagement>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>nexus</id>
-            <url>https://dev.parkl.net/nexus/repository/parkl-public/</url>
-        </pluginRepository>
-    </pluginRepositories>
-
-
+    
 
     <build>
         <plugins>
@@ -104,9 +76,9 @@
                             <bindingFile>${basedir}/src/main/resources/wsdl-binding/add_interface.xml</bindingFile>
                         </bindingFiles>
                         <extraargs>
-                            <!--<extraarg>-xjc-Xfluent-api</extraarg>
+                            <extraarg>-xjc-Xfluent-api</extraarg>
                             <extraarg>-xjc-Xinheritance</extraarg>
-                            <extraarg>-xjc-Xannotate</extraarg>-->
+                            <extraarg>-xjc-Xannotate</extraarg>
                             <!--<extraarg>-verbose</extraarg>-->
                             <extraarg>-exsh</extraarg>
                             <extraarg>true</extraarg>
@@ -275,21 +247,7 @@
             <version>5.10.3</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>jakarta.xml.ws</groupId>
-            <artifactId>jakarta.xml.ws-api</artifactId>
-            <version>4.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.jws</groupId>
-            <artifactId>jakarta.jws-api</artifactId>
-            <version>3.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.bind</groupId>
-            <artifactId>jakarta.xml.bind-api</artifactId>
-            <version>4.0.0</version>
-        </dependency>
+
 
     </dependencies>
 
